@@ -30,11 +30,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // Each call to withUser() starts the configuration for a user. The value given to withUser() is the username
                 .withUser("buzz").password("{noop}infinity").authorities("ROLE_USER").and().withUser("woody").password("{noop}bullseye")
                 .authorities("ROLE_USER");
-
-        /*
-         * HINT: The in-memory user store is convenient for testing purposes or for very simple applications, but it doesn’t
-         * allow for easy editing of users. If you need to add, remove, or change a user, you’ll have to make the necessary
-         * changes and then rebuild and redeploy the application
-         */
     }
 }
